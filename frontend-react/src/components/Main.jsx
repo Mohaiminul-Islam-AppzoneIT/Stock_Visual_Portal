@@ -1,9 +1,9 @@
-import React from 'react';
 import Button from './Button';
 
 const Main = () => {
     return (
        <>
+
         <div className='container p-5 my-5'>
             <div className='p-5 text-center rounded my-5 bg-light-dark'>
                 <h1 className='text-light bg-light-dark'>Stock Visual Portal</h1>

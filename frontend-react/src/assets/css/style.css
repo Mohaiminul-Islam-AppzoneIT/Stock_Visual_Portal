@@ -1,16 +1,24 @@
-*{
-    background-color: #212529;
+* {
+  background-color: #212529;
 }
-#root{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
-
-
-
 
 /* Main jsx  */
-.bg-light-dark{
-    background-color: #2B3035;
+.bg-light-dark {
+  background-color: #2b3035;
+}
+
+/* Registe.jsx */
+.backgroundColor {
+  background-color: #eee;
+}
+.borderRadius {
+  border-radius: 25px;
+}
+.card{
+    border: none !important;
 }

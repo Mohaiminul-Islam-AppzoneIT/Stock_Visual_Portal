@@ -1,9 +1,10 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Button = ({text, design_classes}) => {
+
+const Button = ({text, design_classes, RouteLink}) => {
     return (
         <>
-            <button className={design_classes}>{text}</button>
+            <Link to={RouteLink} className={design_classes}>{text}</Link>
         </>
     );
 };
