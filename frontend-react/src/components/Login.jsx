@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios'
 import {useNavigate} from 'react-router-dom'
 import { AuthContext } from '../authProvider';
+import axiosInstance from '../axiosInstance'
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -29,16 +30,14 @@ const Login = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.post('http://127.0.0.1:8000/api/v1/token/', formData);
-      console.log(response.data);
+      const response = await axiosInstance.post('http://127.0.0.1:8000/api/v1/token/', formData);
       localStorage.setItem("accessToken", response.data.access)
       localStorage.setItem("refreshToken", response.data.refresh)
 
-      console.log("logdedin")
       setErrors({});
       setSuccess(true);
       setIsLoggedIn(true)
-      navigate('/')
+      navigate('/dashboard')
     } catch (error) {
       setErrors('Invalid Credentials');
       console.error('Login error', error.response.data);
