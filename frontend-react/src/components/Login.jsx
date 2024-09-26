@@ -1,7 +1,6 @@
 import { useContext, useState } from 'react';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import axios from 'axios'
 import {useNavigate} from 'react-router-dom'
 import { AuthContext } from '../authProvider';
 import axiosInstance from '../axiosInstance'
