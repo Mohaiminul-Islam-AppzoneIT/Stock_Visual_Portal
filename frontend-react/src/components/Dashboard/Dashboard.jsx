@@ -37,6 +37,15 @@ const Dashboard = () => {
 
             if(response.data.error){
                 setError(response.data.error)
+                setPlot()
+                setMa100()
+                setMa200()
+                setPrediciton()
+                setMse()
+                setRmse()
+                setR2()
+
+
             }
             else{
                 setError()
